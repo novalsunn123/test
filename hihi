@@ -67,3 +67,25 @@ Traceback (most recent call last):
        ^^^^^^^^^
 TypeError: object of type 'NoneType' has no len()
 
+
+
+
+
+@callback(
+    Output("file-select", "options"),
+    Output("file-select", "value"),
+    [Input("log-type-select", "value")],
+)
+def select_file(dataset_name):
+    print(f"Dataset name received: {dataset_name}")  # Debug giá trị dataset_name
+    options = []
+    files = file_manager.uploaded_files()
+    for filename in files:
+        if dataset_name.lower() == "custom" or dataset_name.lower() in filename.lower():
+            options.append({"label": filename, "value": filename})
+
+    if len(options) > 0:
+        return options, options[0]["value"]
+    else:
+        return options, ""
+
