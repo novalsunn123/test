@@ -8,3 +8,16 @@
     body: pd.DataFrame = field(default_factory=pd.DataFrame)
     labels: pd.DataFrame = field(default_factory=pd.DataFrame)
     _index: np.array = field(init=False) 
+
+
+
+
+from gui.pages.utils import create_upload_file_layout
+
+app.layout = html.Div(
+    [
+        dcc.Location(id="url", refresh=False),
+        create_upload_file_layout(),  # Thêm phần tải file vào layout
+        html.Div(id="page-content"),
+    ]
+)
