@@ -21,3 +21,10 @@ app.layout = html.Div(
         html.Div(id="page-content"),
     ]
 )
+
+
+@callback(Output("page-content", "children"), [Input("url", "pathname")])
+def display_page(pathname):
+    if pathname == "/upload":
+        return create_upload_file_layout()  # Hiển thị phần tải file trên trang /upload
+    # Các trang khác...
