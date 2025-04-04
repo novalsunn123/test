@@ -33,3 +33,37 @@ def display_page(pathname):
 
     print("Uploaded Filenames:", uploaded_filenames)
     print("Uploaded File Contents:", uploaded_file_contents)
+
+
+
+
+
+loi 
+Traceback (most recent call last):
+  File "/logai/venv/lib/python3.12/site-packages/flask/app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/logai/venv/lib/python3.12/site-packages/flask/app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/logai/venv/lib/python3.12/site-packages/flask/app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/logai/venv/lib/python3.12/site-packages/flask/app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/logai/venv/lib/python3.12/site-packages/dash/dash.py", line 1405, in dispatch
+    ctx.run(
+  File "/logai/venv/lib/python3.12/site-packages/dash/_callback.py", line 529, in add_context
+    raise err
+  File "/logai/venv/lib/python3.12/site-packages/dash/_callback.py", line 518, in add_context
+    output_value = _invoke_callback(func, *func_args, **func_kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/logai/venv/lib/python3.12/site-packages/dash/_callback.py", line 47, in _invoke_callback
+    return func(*args, **kwargs)  # %% callback invoked %%
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/logai/gui/callbacks/clustering.py", line 180, in update_logline_list
+    if len(data) > 0:
+       ^^^^^^^^^
+TypeError: object of type 'NoneType' has no len()
+
