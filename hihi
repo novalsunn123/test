@@ -28,3 +28,8 @@ def display_page(pathname):
     if pathname == "/upload":
         return create_upload_file_layout()  # Hiển thị phần tải file trên trang /upload
     # Các trang khác...
+
+
+
+    print("Uploaded Filenames:", uploaded_filenames)
+    print("Uploaded File Contents:", uploaded_file_contents)
