@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng ký</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Đăng ký</h2>
+    <form action="actions/register.php" method="post">
+      <label for="username">Tên đăng nhập:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Mật khẩu:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="mssv">MSSV:</label>
+      <input type="text" id="mssv" name="mssv" required>
+
+      <button type="submit">Đăng ký</button>
+    </form>
+    <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+  </div>
+</body>
+</html>
